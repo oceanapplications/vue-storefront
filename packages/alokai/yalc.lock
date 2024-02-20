@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "alokai-init": {
+      "signature": "28ce606f8ac3ff45cf55c9e478795b6d",
+      "file": true
+    }
+  }
+}

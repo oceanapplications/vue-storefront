@@ -1,11 +1,10 @@
 {
-  "name": "alokai",
-  "version": "0.0.1",
-  "description": "alokai CLI",
-  "private": true,
+  "name": "alokai-init",
+  "version": "0.0.3",
+  "description": "alokai-init CLI",
   "types": "build/types/types.d.ts",
   "bin": {
-    "alokai": "bin/alokai"
+    "alokai-init": "bin/alokai-init"
   },
   "scripts": {
     "clean-build": "rimraf -rf ./build",
@@ -17,9 +16,7 @@
     "test": "jest",
     "watch": "jest --watch",
     "snapupdate": "jest --updateSnapshot",
-    "coverage": "jest --coverage",
-    "start": "./bin/alokai",
-    "install-global": "yarn build && yarn link && yarn global add file:$PWD"
+    "coverage": "jest --coverage"
   },
   "files": [
     "build",
@@ -30,19 +27,15 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "alokai-init": "file:.yalc/alokai-init",
-    "gluegun": "latest"
+    "@octokit/rest": "^20.0.2",
+    "execa": "^5.1.1",
+    "gluegun": "latest",
+    "isomorphic-git": "^1.25.6",
+    "zod": "^3.22.4"
   },
-  "devDependencies": {
-    "@types/node": "^12.7.11",
-    "copyfiles": "^2.4.1",
-    "eslint": "^7.22.0",
-    "husky": "^5.1.3",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0",
-    "ts-jest": "^26.5.3",
-    "ts-node": "^10.9.1",
-    "typescript": "~4.5.0"
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   },
   "prettier": {
     "semi": false,
@@ -52,5 +45,6 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "yalcSig": "28ce606f8ac3ff45cf55c9e478795b6d"
 }
